@@ -3,59 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects & Footer</title>
+    <title>Task Manager</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <!-- Projects Section -->
-    <section class="projects-section">
-        <h2 class="section-title">Featured Projects</h2>
+    <div class="app">
 
-        <div class="projects-grid">
-            <!-- Card 1: Featured (Spans 2 Rows on Desktop) -->
-            <article class="project-card featured">
-                <span class="badge">Featured Project</span>
-                <h3 class="project-title">Weather App Dashboard</h3>
-                <p class="project-desc">
-                    A real-time weather analytics platform built with modern JavaScript and REST APIs. Features dynamic forecasting, radar maps, and location tracking.
-                </p>
-                <a href="https://github.com/tk7586090" target="_blank" class="project-link">
-    View Project →
-</a> <&rarr;
-                </a>
-            </article>
-
-            <!-- Card 2 -->
-            <article class="project-card">
-                <h3 class="project-title">Task Master To-Do List</h3>
-                <p class="project-desc">
-                    A clean productivity application with drag-and-drop task management, category filtering, and local storage persistence.
-                </p>
-                <a href="https://github.com/tk7586090" target="_blank" class="project-link">
-    View Project →
-</a> &rarr;
-                </a>
-            </article>
-
-            <!-- Card 3 -->
-            <article class="project-card">
-                <h3 class="project-title">Developer Portfolio Website</h3>
-                <p class="project-desc">
-                    A responsive single-page portfolio built using semantic HTML5, CSS Grid, Flexbox, and fluid typography.
-                </p>
-                <a href="https://github.com/tk7586090" target="_blank" class="project-link">
-    View Project →
-</a> &rarr;
-                </a>
-            </article>
+        <div class="app-header">
+            <h1>My Tasks</h1>
+            <span class="task-count" id="task-count">0 tasks</span>
         </div>
-    </section>
 
-    <!-- Footer Section -->
-    <footer class="site-footer">
-        <p>&copy; Teenu.</p>
-    </footer>
+        <div class="input-row">
+            <input
+                type="text"
+                id="task-input"
+                class="task-input"
+                placeholder="Add a new task..."
+                maxlength="100"
+            >
 
+            <button class="add-btn" id="add-btn">Add</button>
+        </div>
+
+        <div class="filter-tabs">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="active">Active</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+
+        <ul class="task-list" id="task-list"></ul>
+
+        <div class="app-footer">
+            <span id="remaining-count">0 remaining</span>
+            <button class="clear-btn" id="clear-completed">
+                Clear Completed
+            </button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
 </body>
-</html> 
+</html>
